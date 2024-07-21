@@ -7,6 +7,12 @@ if not (vim.env.LAZY or (vim.uv or vim.loop).fs_stat(lazypath)) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Set Neovide settings
+vim.opt.guifont = "Hack Nerd Font:h12"
+vim.g.neovide_refresh_rate = 144
+vim.g.neovide_refresh_rate_idle = 5
+vim.g.neovide_fullscreen = false
+
 -- validate that lazy is available
 if not pcall(require, "lazy") then
   -- stylua: ignore
